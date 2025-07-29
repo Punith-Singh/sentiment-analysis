@@ -41,7 +41,7 @@ cd src
 
 ##Step 2: Create and activate a virtual environment (optional but recommended)
 
-##Step 3: Install dependencies
+##Step 3: Install dependencies that are required for the project
 
 ##Step 4: Train the Logistic Regression model
 
