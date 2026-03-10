@@ -1,54 +1,33 @@
-![image](https://github.com/user-attachments/assets/b088180d-d12f-4535-a27f-90dc8f1a0fc1)
 # Social Media Sentiment Analysis
 
-## Project Overview
-This project analyzes the sentiment of Twitter data using a Logistic Regression model to classify tweets as positive, negative, or neutral. It includes interactive visualizations such as sunburst and lollipop charts, and a Streamlit app to allow users to explore sentiment predictions in an easy-to-use interface.
+This project analyzes tweet sentiment with a Logistic Regression model and provides a Streamlit app for interactive predictions and visualizations.
 
-## Features
-- Train a Logistic Regression model for sentiment classification.
-- Visualize sentiment distribution with Sunburst and Lollipop charts.
-- Streamlit app for interactive sentiment analysis.
-- Separate training and validation datasets.
-- Command-line execution for training and running the app.
+## Project structure
+- `sentiment/train.py`: trains and saves the sentiment model.
+- `sentiment/app.py`: Streamlit UI for inference and charts.
+- `sentiment/preprocess.py`: text cleaning and sentiment helper utilities.
+- `sentiment/visualizations.py`: chart utilities.
+- `sentiment/twitter_training.csv`: training data.
+- `sentiment/twitter_validation.csv`: validation data.
 
-## Technologies Used
-- Python
-- Scikit-learn (Logistic Regression)
-- Plotly / Matplotlib / Seaborn (Visualizations)
-- Streamlit (Web app framework)
-
-## Dataset
-- Two datasets are used:
-  - Training dataset
-  - Validation dataset  
-- Each contains labeled tweets with sentiment tags.
-
----
-
-## Installation & Setup
-
-Clone the repository
+## Setup
 ```bash
-git clone https://github.com/Punith-Singh/sentiment-analysis.git
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
 
-## How to Run the Project
-
-### Step 1: Clone the repository
+## Run
+Train the model:
 ```bash
-git clone https://github.com/yourusername/social-media-sentiment-analysis.git
-cd sentiment
-cd src
+python sentiment/train.py
+```
 
-##Step 2: Create and activate a virtual environment (optional but recommended)
+Launch the app:
+```bash
+streamlit run sentiment/app.py
+```
 
-##Step 3: Install dependencies that are required for the project
-
-##Step 4: Train the Logistic Regression model
-
-         python train.py ( This command will train your model using the training dataset and save the trained model file )
-
-##Step 5: Run the Streamlit app
-         streamlit run app.py ( This launches the interactive web app where you can input tweets, get sentiment predictions, and explore visualizations )
-
-
-
+## Notes
+- The training and validation CSV files are included in this repository.
+- If NLTK resources are not present, the first run may download them.
