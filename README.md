@@ -1,5 +1,5 @@
 ![image](https://github.com/user-attachments/assets/b088180d-d12f-4535-a27f-90dc8f1a0fc1)
-# Social Media Sentiment Analysis
+# Social Media Sentiment Analysis 📈
 
 ## Project Overview
 This project analyzes the sentiment of Twitter data using a Logistic Regression model to classify tweets as positive, negative, or neutral. It includes interactive visualizations such as sunburst and lollipop charts, and a Streamlit app to allow users to explore sentiment predictions in an easy-to-use interface.
@@ -49,6 +49,7 @@ cd src
 
 ##Step 5: Run the Streamlit app
          streamlit run app.py ( This launches the interactive web app where you can input tweets, get sentiment predictions, and explore visualizations )
+
 
 
 
